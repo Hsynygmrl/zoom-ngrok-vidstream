@@ -112,8 +112,8 @@ class MyWindow(QMainWindow):
         self.gonder.clicked.connect(self.yolla)
     def yolla(self):
                 
-                self.show_table.append('Abdullah: ' + str(self.conn.recv(2048).decode())+'\n')
-                self.conn.send(str.encode(str(self.write_text.text()+' '))) # karşıya ack' i encode et ve yolla
+                self.show_table.append('My Friend: ' + str(self.conn.recv(2048).decode())+'\n')
+                self.conn.send(str.encode(str(self.write_text.text()+' ')))
                 self.show_table.append('Ben: '+ self.write_text.text() +'\n')
                     
                
