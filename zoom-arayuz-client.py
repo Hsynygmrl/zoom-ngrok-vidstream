@@ -108,7 +108,7 @@ class MyWindow(QMainWindow):
                     def a():
                         self.show_table.append('Ben: ' +self.write_text.text() +'\n')
                         self.client_socket.send(str.encode(str(self.write_text.text()+' ')))
-                        self.show_table.append('Abdullah: ' + str(self.client_socket.recv(2048).decode())+'\n')
+                        self.show_table.append('My Friend: ' + str(self.client_socket.recv(2048).decode())+'\n')
                     t22 = threading.Thread(target=a)
                     t22.start()
                     
